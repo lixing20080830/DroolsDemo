@@ -3,7 +3,7 @@ package com.drools.demo.point
 import com.drools.demo.point.PointDomain;
 
 rule birthdayPoint
-	// ¹ıÉúÈÕ£¬Ôò¼Ó10·Ö£¬²¢ÇÒ½«µ±ÔÂ½»Ò×±ÈÊı·­±¶ºóÔÙ¼ÆËã»ı·Ö
+	// è¿‡ç”Ÿæ—¥ï¼Œåˆ™åŠ 10åˆ†ï¼Œå¹¶ä¸”å°†å½“æœˆäº¤æ˜“æ¯”æ•°ç¿»å€åå†è®¡ç®—ç§¯åˆ†
 	salience 100
 	lock-on-active true
 	when
@@ -13,12 +13,12 @@ rule birthdayPoint
 		$pointDomain.setBuyNums($pointDomain.getBuyNums()*2);
 		$pointDomain.setBuyMoney($pointDomain.getBuyMoney()*2);
 		$pointDomain.setBillThisMonth($pointDomain.getBillThisMonth()*2);
-		
+
 		$pointDomain.recordPointLog($pointDomain.getUserName(),"birthdayPoint");
 end
 
 rule billThisMonthPoint
-	// 2011-01-08 - 2011-08-08Ã¿ÔÂĞÅÓÃ¿¨»¹¿î3´ÎÒÔÉÏ£¬Ã¿Âú3±ÊÔùËÍ30·Ö
+	// 2011-01-08 - 2011-08-08æ¯æœˆä¿¡ç”¨å¡è¿˜æ¬¾3æ¬¡ä»¥ä¸Šï¼Œæ¯æ»¡3ç¬”èµ é€30åˆ†
 	salience 99
 	lock-on-active true
 	date-effective "2011-01-08 23:59:59"
@@ -31,7 +31,7 @@ rule billThisMonthPoint
 end
 
 rule buyMoneyPoint
-	// µ±ÔÂ¹ºÎï×Ü½ğ¶î100ÒÔÉÏ£¬Ã¿100ÔªÔùËÍ10·Ö
+	// å½“æœˆè´­ç‰©æ€»é‡‘é¢100ä»¥ä¸Šï¼Œæ¯100å…ƒèµ é€10åˆ†
 	salience 98
 	lock-on-active true
 	when
@@ -42,7 +42,7 @@ rule buyMoneyPoint
 end
 
 rule buyNumsPoint
-	// µ±ÔÂ¹ºÎï´ÎÊı5´ÎÒÔÉÏ£¬Ã¿Îå´ÎÔùËÍ50·Ö
+	// å½“æœˆè´­ç‰©æ¬¡æ•°5æ¬¡ä»¥ä¸Šï¼Œæ¯äº”æ¬¡èµ é€50åˆ†
 	salience 97
 	lock-on-active true
 	when
@@ -53,7 +53,7 @@ rule buyNumsPoint
 end
 
 rule allFitPoint
-	// ÌØ±ğµÄ£¬Èç¹ûÈ«²¿Âú×ãÁËÒªÇó£¬Ôò¶îÍâ½±Àø100·Ö
+	// ç‰¹åˆ«çš„ï¼Œå¦‚æœå…¨éƒ¨æ»¡è¶³äº†è¦æ±‚ï¼Œåˆ™é¢å¤–å¥–åŠ±100åˆ†
 	salience 96
 	lock-on-active true
 	when

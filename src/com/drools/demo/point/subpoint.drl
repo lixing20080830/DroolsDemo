@@ -3,7 +3,7 @@ package com.drools.demo.point
 import com.drools.demo.point.PointDomain;
 
 rule subBackNumsPoint
-	// ·¢ÉúÍË»õ£¬¿Û¼õ10·Ö
+	// å‘ç”Ÿé€€è´§ï¼Œæ‰£å‡10åˆ†
 	salience 10
 	lock-on-active true
 	when
@@ -14,7 +14,7 @@ rule subBackNumsPoint
 end
 
 rule subBackMondyPoint
-	// ÍË»õ½ğ¶î´óÓÚ100£¬¿Û¼õ100·Ö
+	// é€€è´§é‡‘é¢å¤§äº100ï¼Œæ‰£å‡100åˆ†
 	salience 9
 	lock-on-active true
 	when
